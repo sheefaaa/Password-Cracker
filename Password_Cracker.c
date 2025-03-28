@@ -105,8 +105,12 @@ int main() {
             printf("\nExiting... Thank you!\n");
             break;
         }
-
-        printf("\nEnter password to check: ");
+        if (choice==1){
+        printf("\nEnter password to check (Only 3 characters): ");
+        }
+        else{
+             printf("\nEnter password to check: ");
+        }
         scanf("%s", user.password);
         user.hash = generate_hash(user.password); // Hashing the input password
 
