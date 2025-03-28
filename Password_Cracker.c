@@ -33,7 +33,7 @@ void dictionary_attack(PasswordData *user) {
     "whatever", "nothing", "654321", "hockey", "cookie", "shefa"};
 
     int found = 0;
-    for (int i = 0; i < 70; i++) {
+    for (int i = 0; i < 61; i++) {
         if (user->hash == generate_hash(common_passwords[i])) {
             printf("\nWeak password found in dictionary! (%s)\n", common_passwords[i]);
             found = 1;
