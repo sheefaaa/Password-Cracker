@@ -1,53 +1,61 @@
-Password Cracking System
-Description:
-This is a password-cracking simulation system designed as part of my academic project. It includes both brute force and dictionary attack methods to test password security. The program allows the user to input a password and attempts to crack it using these two methods.
-Installation
-To set up the project, follow these steps:
-1.	Clone this repository to your local machine:
-bash
-CopyEdit
-git clone https://github.com/yourusername/your-repository.git
-2.	Navigate to the project directory:
-bash
-CopyEdit
-cd your-repository
-3.	(If applicable) Install any dependencies or required tools:
-bash
-CopyEdit
-# Example (if using a tool or library)
-make install
+# Password Cracking System
 
-Usage
-Once installed, follow these steps to use the project:
-1.	Compile the project:
-bash
-CopyEdit
-gcc -o password_cracker password_cracker.c
-2.	Run the program:
-bash
-CopyEdit
-./password_cracker
-3.	The program will prompt you to enter a password and select an attack method (Brute Force or Dictionary).
-Example Output:
-markdown
-CopyEdit
-============================  
+## Description
+The **Password Cracking System** is a simple C program that demonstrates two types of password attacks:
+1. **Dictionary Attack**: Compares the hashed password against a list of common weak passwords.
+2. **Brute Force Attack**: Attempts to crack short passwords by generating all possible character combinations.
+
+The program utilizes the **DJB2 hashing algorithm** to generate hashes for password comparison.
+
+## Features
+- Uses a predefined dictionary of common passwords.
+- Implements a brute force attack for passwords of length 3 (a-z, A-Z, 0-9).
+- Provides a simple command-line interface for user interaction.
+
+## Usage
+### Compilation
+Use the following command to compile the program:
+```bash
+gcc password_cracking.c -o password_cracking
+```
+
+### Running the Program
+Execute the compiled file:
+```bash
+./password_cracking
+```
+
+### Menu Options
+- **1. Brute Force Attack**: Attempts to guess the password by generating all possible 3-character combinations.
+- **2. Dictionary Attack**: Checks if the password exists in a predefined dictionary of weak passwords.
+- **3. Exit**: Terminates the program.
+
+## Example Usage
+```
+============================
    PASSWORD CRACKING SYSTEM  
 ============================
 1. Brute Force Attack
 2. Dictionary Attack
 3. Exit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Enter your choice: 1
+Enter your choice: 2
+
 Enter password to check: password123
 
-Features
-•	Brute Force Attack: Tries all combinations for a 3-character password using characters from a-z, A-Z, and 0-9.
-•	Dictionary Attack: Matches the input password against a list of common passwords.
+Weak password found in dictionary! (password123)
+```
 
-Contact
-For any questions or feedback, reach me at:
-•	Email: shefa242-35-068@diu.edu.bd
-•	GitHub:github.com/sheefaaa
+## Limitations
+- The brute force attack is limited to passwords of **exactly 3 characters**.
+- The dictionary attack is restricted to the predefined list of common passwords.
+- The program does not handle salts or advanced cryptographic hashing methods.
 
+## Future Improvements
+- Expand brute force attack to handle longer passwords.
+- Implement support for multi-threading to improve brute-force efficiency.
+- Enhance security with more advanced cryptographic techniques.
+
+## License
+This project is for educational purposes only. Unauthorized use against real-world systems without permission is strictly prohibited.
 
