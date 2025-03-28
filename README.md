@@ -5,3 +5,4 @@
 ✔️ Dictionary Attack (predefined common passwords) 
 ✔️ Brute Force Attack (3-character passwords) 
 ✔️ Simple and Interactive CLI Interface
+
